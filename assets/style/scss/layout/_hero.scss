@@ -1,2 +1,11 @@
 @use '../abstracts/typography';
+@use '../abstracts/measurments';
 
+.hero_text_section{
+
+    padding-inline: measurments.$wrapper;
+    text-align: center;
+    h1{
+        text-transform: capitalize;
+    }
+}

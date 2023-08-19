@@ -1,8 +1,33 @@
-$small: 12px;
+@use './colors';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$small: 1.125rem;
 $form-label: 14px;
 $medium: 16px;
+$m-xlarge: 2rem;
+
+
+$light: 300;
+$light-bold: 400;
+$bold: 500;
+
+
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4{
+    color: colors.$black;
+}
+
+p{
+    font-size: $small;
+    font-weight: $light;
+    color: colors.$grayishBlue;
+}
 
 h1{
-    font-size: 60px;
+    font-size: $m-xlarge;
+    font-weight: $bold;
     text-align: center;
 }
