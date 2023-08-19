@@ -1,0 +1,23 @@
+@use '../abstracts/colors';
+@use '../abstracts/measurments';
+
+header{
+
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: measurments.$wrapper;
+
+    .hamburger_menu span{
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        height: 3px;
+        background-color: colors.$black;
+
+        &:not(:first-child){
+            margin-top: 2px;
+        }
+    }
+}
