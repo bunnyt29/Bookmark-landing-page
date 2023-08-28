@@ -1,11 +1,35 @@
 @use '../abstracts/typography';
 @use '../abstracts/measurments';
 
-.hero_text_section{
+.hero{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
 
-    padding-inline: measurments.$wrapper;
-    text-align: center;
-    h1{
-        text-transform: capitalize;
+    &_image_section{
+        img{
+            width: 100%;
+        }
+        margin-bottom: 50px;
+    }
+
+    &_text_section{
+
+        padding-inline: measurments.$wrapper;
+        text-align: center;
+        h1{
+            margin-bottom: 1.7rem;
+            text-transform: capitalize;
+        }
+
+        &_buttons{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+
+            a{
+                padding: 15px;
+            }
+        }
     }
 }

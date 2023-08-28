@@ -1,0 +1,15 @@
+@use '../abstracts/colors';
+@use '../abstracts//typography';
+
+.button{
+    background-color: rgb(245, 244, 244);
+    color: rgb(93, 93, 93);
+    font-weight: typography.$bold;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px rgb(189, 189, 189);
+}
+
+.colored{
+    background-color: colors.$softBlue;
+    color: colors.$white;
+}

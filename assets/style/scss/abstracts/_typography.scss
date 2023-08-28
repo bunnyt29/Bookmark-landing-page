@@ -1,15 +1,17 @@
 @use './colors';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
-$small: 1.125rem;
-$form-label: 14px;
-$medium: 16px;
+$m-xsmall:0.9rem;
+$m-small: 1rem;
 $m-xlarge: 2rem;
 
 
 $light: 300;
 $light-bold: 400;
 $bold: 500;
+
+$small-line-height: 1.725rem;
+$medium-line-height: 2.5rem;
 
 
 h1, h2, h3, h4, h5, h6, p, a{
@@ -20,14 +22,22 @@ h1, h2, h3, h4{
     color: colors.$black;
 }
 
-p{
-    font-size: $small;
-    font-weight: $light;
-    color: colors.$grayishBlue;
-}
-
 h1{
     font-size: $m-xlarge;
     font-weight: $bold;
     text-align: center;
+    line-height: $medium-line-height;
 }
+
+p{
+    font-size: $m-small;
+    font-weight: $light;
+    color: colors.$grayishBlue;
+    line-height: $small-line-height;
+}
+
+a{
+    font-size: $m-xsmall;
+    text-decoration: none;
+}
+
