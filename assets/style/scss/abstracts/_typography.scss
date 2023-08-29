@@ -3,6 +3,8 @@
 
 $m-xsmall:0.9rem;
 $m-small: 1rem;
+$m-medium: 1.5rem;
+$m-large: 1.750rem;
 $m-xlarge: 2rem;
 
 
@@ -19,14 +21,22 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 
 h1, h2, h3, h4{
-    color: colors.$black;
+    color: colors.$black;   
+    font-weight: $bold;
 }
 
 h1{
     font-size: $m-xlarge;
-    font-weight: $bold;
     text-align: center;
     line-height: $medium-line-height;
+}
+
+h2{
+    font-size: $m-large;
+}
+
+h3{
+    font-size: $m-medium;
 }
 
 p{

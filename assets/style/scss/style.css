@@ -59,13 +59,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 h1, h2, h3, h4 {
   color: hsl(0, 0%, 12%);
+  font-weight: 500;
 }
 
 h1 {
   font-size: 2rem;
-  font-weight: 500;
   text-align: center;
   line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -85,7 +93,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1.875em;
+  padding-inline: 1.875rem;
 }
 header .hamburger_menu span {
   display: flex;
@@ -110,7 +118,7 @@ header .hamburger_menu span:not(:first-child) {
   width: 100%;
 }
 .hero_text_section {
-  padding-inline: 1.875em;
+  padding-inline: 1.875rem;
   text-align: center;
 }
 .hero_text_section h1 {
@@ -124,6 +132,50 @@ header .hamburger_menu span:not(:first-child) {
 }
 .hero_text_section_buttons a {
   padding: 15px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 150px;
+  padding-inline: 1.875rem;
+}
+.features h2 {
+  padding-bottom: 20px;
+}
+.features_list {
+  padding-block: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+.features_list_item {
+  padding-block: 10px;
+  font-weight: 400;
+  border-top: solid 1px rgb(208, 208, 208);
+}
+.features_list_content .content {
+  display: flex;
+  flex-direction: column;
+}
+.features_list_content .content img {
+  width: 100%;
+  padding-bottom: 70px;
+}
+.features_list_content .content h3 {
+  padding-bottom: 15px;
+}
+.features_list_content #content_two {
+  display: none;
+}
+.features_list_content #content_three {
+  display: none;
+}
+.features .clicked {
+  color: black;
+  -webkit-text-decoration: underline red;
+          text-decoration: underline red;
 }
 
 .button {
