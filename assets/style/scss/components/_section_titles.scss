@@ -1,0 +1,10 @@
+@use '../abstracts/measurments';
+
+.section_titles{
+    padding-top: measurments.$sections-top;
+    text-align: center;
+
+    h2{
+        padding-bottom: 15px;
+    }
+}

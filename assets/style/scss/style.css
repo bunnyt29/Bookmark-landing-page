@@ -138,11 +138,7 @@ header .hamburger_menu span:not(:first-child) {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 150px;
   padding-inline: 1.875rem;
-}
-.features h2 {
-  padding-bottom: 20px;
 }
 .features_list {
   padding-block: 30px 50px;
@@ -155,18 +151,25 @@ header .hamburger_menu span:not(:first-child) {
   font-weight: 400;
   border-top: solid 1px rgb(208, 208, 208);
 }
+.features_list_item:last-child {
+  border-bottom: solid 1px rgb(208, 208, 208);
+}
 .features_list .clicked {
   color: black;
   font-weight: 500;
   position: relative;
+  width: 100%;
 }
 .features_list .clicked:before {
   content: "";
   position: absolute;
-  left: 50;
+  left: 25%;
   bottom: 0;
-  width: 45%;
+  width: 50%;
   border-bottom: 3px solid red;
+}
+.features_list:hover {
+  cursor: pointer;
 }
 .features_list_content .content {
   display: flex;
@@ -189,6 +192,75 @@ header .hamburger_menu span:not(:first-child) {
   display: none;
 }
 
+.extensions {
+  padding-inline: 1.875rem;
+}
+.extensions_browsers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px;
+  margin-top: 50px;
+}
+.extensions_browsers_browser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgb(235, 232, 232);
+}
+.extensions_browsers_browser_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 30px;
+}
+.extensions_browsers_browser_content img {
+  padding-bottom: 25px;
+}
+.extensions_browsers_browser_button {
+  padding: 20px;
+  border-top: 5px dotted rgba(212, 210, 210, 0.788);
+  display: flex;
+  justify-content: center;
+}
+.extensions_browsers_browser_button a {
+  padding: 15px 30px;
+}
+
+.questions {
+  padding-inline: 1.875rem;
+}
+.questions_accordion {
+  /* Style the buttons that are used to open and close the accordion panel */
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+}
+.questions_accordion .accordion {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: solid 1px rgb(208, 208, 208);
+  outline: none;
+  transition: 0.4s;
+}
+.questions_accordion .active, .questions_accordion .accordion:hover {
+  background-color: #ccc;
+}
+.questions_accordion .panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
 .button {
   background-color: rgb(245, 244, 244);
   color: rgb(93, 93, 93);
@@ -200,4 +272,12 @@ header .hamburger_menu span:not(:first-child) {
 .colored {
   background-color: hsl(231, 69%, 60%);
   color: hsl(0, 0%, 100%);
+}
+
+.section_titles {
+  padding-top: 150px;
+  text-align: center;
+}
+.section_titles h2 {
+  padding-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
