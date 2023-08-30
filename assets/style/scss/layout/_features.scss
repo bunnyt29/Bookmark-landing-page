@@ -23,6 +23,23 @@
             font-weight: typography.$light-bold;
             border-top: solid 1px rgb(208, 208, 208);
         }
+
+        .clicked{
+            color: black;
+            font-weight: typography.$bold;
+            position: relative;
+        }
+        
+        .clicked:before{
+            content : "";
+            position: absolute;
+            left    : 50;
+            bottom  : 0;
+            width   : 45%;
+            border-bottom: 3px solid red;
+        }
+
+        
     }
 
     &_list_content{
@@ -40,6 +57,10 @@
             }
         }
 
+        #content_one{
+            display: none;
+        }
+
         #content_two{
             display: none;
         }
@@ -47,10 +68,5 @@
         #content_three{
             display: none;
         }
-    }
-
-    .clicked{
-        color: black;
-        text-decoration: underline red;
     }
 }
