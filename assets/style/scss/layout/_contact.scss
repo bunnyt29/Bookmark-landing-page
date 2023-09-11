@@ -1,0 +1,75 @@
+@use '../abstracts/measurments';
+@use '../abstracts/typography';
+@use '../abstracts/colors';
+
+
+.contact {
+    padding-inline: measurments.$wrapper;
+    margin-top: measurments.$sections-top;
+    background-color: colors.$softBlue;
+    padding-block: 50px 25px;
+    text-align: center;
+
+    &_title {
+        p {   
+            font-size: typography.$m-xsmall;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: typography.$wide-letter-spasing;
+        }
+    
+        h3 {
+            margin-top: 15px;
+            color: white;
+        }
+    }
+
+    .contact_form {
+        display: flex;
+        flex-direction: column;
+
+        .input_form{
+            input {
+                margin-top: 30px;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                width: 100%;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+            }
+    
+            #hidden_error {
+                display: none;
+                background-color: colors.$softRed;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-bottom: 20px;
+                text-decoration: none;
+                margin-top: -3px;
+                padding-inline: 20px;
+    
+                p{
+                    font-size: typography.$m-xxsmall;
+                    font-weight: typography.$bold;
+                    font-style: italic;
+                    text-align: left;
+                    color: white;
+                }
+            }
+        }
+
+        a {
+            margin-top: 30px;
+            padding-block: 15px;
+            box-shadow: none;
+        }
+    }
+
+    .error{
+        border: 2px solid colors.$softRed !important; 
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+
+    }
+}
