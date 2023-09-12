@@ -4,10 +4,10 @@
 
 
 .contact {
-    padding-inline: measurments.$wrapper;
     margin-top: measurments.$sections-top;
+    padding-inline: measurments.$wrapper;
+    padding-block: 50px 50px;
     background-color: colors.$softBlue;
-    padding-block: 50px 25px;
     text-align: center;
 
     &_title {
@@ -63,13 +63,13 @@
             margin-top: 30px;
             padding-block: 15px;
             box-shadow: none;
+            cursor: pointer;
         }
     }
 
-    .error{
+    .error {
         border: 2px solid colors.$softRed !important; 
         border-bottom-left-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
-
     }
 }

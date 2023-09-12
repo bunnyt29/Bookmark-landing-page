@@ -8,12 +8,40 @@
 </head>
 <body>
   <header>
-    <img src="assets/images/logo-bookmark.svg" alt="Bookmark">
-    <div class="hamburger_menu">
+    <!-- <img src="assets/images/logo-bookmark.svg" alt="Bookmark"> -->
+    <!-- <div class="hamburger_menu">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
+    <nav id="nav" class="nav" role="navigation">
+      
+      <!-- ACTUAL NAVIGATION MENU -->
+      <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+        <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
+      </ul>
+      <img src="assets/images/logo-bookmark.svg" alt="bookmark-logo">
+      <!-- MENU TOGGLE BUTTON -->
+      <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+        <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <title>Toggle Menu</title>
+          <g>
+            <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/>
+            <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/>
+            <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+          </g>
+        </svg>
+      </a>
+      
+      <!-- ANIMATED BACKGROUND ELEMENT -->
+      <div class="splash"></div>
+      
+    </nav>
   </header>
   <section class="hero">
     <div class="hero_image_section">
@@ -149,6 +177,18 @@
       <div id="response"></div>
     </div>   
   </section>
+  <footer>
+    <img src="assets/images/logo-bookmark.svg" alt="bookmark-logo">
+    <a href="#">features</a>
+    <a href="#">pricing</a>
+    <a href="#">contact</a>
+    <div class="footer_social_media_links">
+      <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #ffffff;"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/49e6aae289.js" crossorigin="anonymous"></script>
+  <script src="assets/js/navOpen.js"></script>
   <script src="assets/js/features.js"></script>
   <script src="assets/js/accordion.js"></script>
   <script src="assets/js/emailCheck.js"></script>
