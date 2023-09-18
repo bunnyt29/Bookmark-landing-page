@@ -1,5 +1,6 @@
 @use '../abstracts/typography';
 @use '../abstracts/measurments';
+@use '../breakpoints/breakpoints';
 
 .hero{
     display: flex;
@@ -9,26 +10,65 @@
     &_image_section{
         img{
             width: 100%;
+            margin-bottom: 50px;
         }
-        margin-bottom: 50px;
-    }
+    }  
 
     &_text_section{
-
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         padding-inline: measurments.$wrapper;
         text-align: center;
+
         h1{
-            margin-bottom: 1.7rem;
             text-transform: capitalize;
         }
 
         &_buttons{
             display: flex;
             justify-content: space-evenly;
-            margin-top: 2rem;
 
             a{
                 padding: 15px;
+            }
+        }
+    }
+
+    @include breakpoints.media(">LGdesktop"){
+        margin-top: 200px;
+        padding-inline: measurments.$wrapper-desktop;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        &_image_section{
+            img{
+                width: 120%;
+                margin-bottom: -100px;
+            }
+        }
+
+        &_text_section{
+            padding-inline: 0;
+            gap: 40px;
+            text-align: left;
+            justify-content: flex-end;
+
+            h1{
+                width: 20ch;
+            }
+
+            p{
+                width: 43ch;
+            }
+
+            &_buttons{
+                justify-content: flex-start;
+                gap: 20px;
+
+                a{
+                    padding: 25px 40px;
+                }
             }
         }
     }

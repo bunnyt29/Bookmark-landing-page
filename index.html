@@ -14,7 +14,7 @@
       <span></span>
       <span></span>
     </div> -->
-    <nav id="nav" class="nav" role="navigation">
+    <nav id="nav" class="nav nav_mobile" role="navigation">
       
       <!-- ACTUAL NAVIGATION MENU -->
       <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
@@ -23,6 +23,10 @@
         <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
       </ul>
+      <div class="nav_social_media_links">
+        <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a>
+      </div>
       <img src="assets/images/logo-bookmark.svg" alt="bookmark-logo">
       <!-- MENU TOGGLE BUTTON -->
       <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
@@ -32,7 +36,7 @@
             <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/>
             <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
             <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
-            <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/>
+            <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/> 
             <circle class="menuicon__circle" r="23" cx="25" cy="25" />
           </g>
         </svg>
@@ -41,6 +45,15 @@
       <!-- ANIMATED BACKGROUND ELEMENT -->
       <div class="splash"></div>
       
+    </nav>
+    <nav class="nav_desktop">
+      <img src="/assets/images/logo-bookmark.svg" alt="bookmark-logo">
+      <div class="nav_desktop_links">
+        <a href="">Features</a>
+        <a href="">Pricing</a>
+        <a href="">Contact</a>
+        <a class="button colored-red login" href="">Login</a>
+      </div>
     </nav>
   </header>
   <section class="hero">

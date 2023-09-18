@@ -1,5 +1,7 @@
 @use '../abstracts/colors';
+@use '../abstracts/typography';
 @use '../abstracts/measurments';
+@use '../breakpoints/breakpoints';
 
 header {
     height:5rem;
@@ -8,8 +10,6 @@ header {
         $pi: 3.141592653;
         @return 2*$pi*$r;
     }
-  
-  
   // ---------------------------
   // Main Navigation Menu
   // ---------------------------
@@ -47,12 +47,26 @@ header {
         background-color:rgba(0,0,0,.5);
       }
     }
+
+    &_social_media_links{
+      display:flex;
+      justify-content:center;
+      gap: 40px;
+      position:relative;
+      z-index:5;
+      visibility:hidden;
+
+      i{
+        opacity:0;
+        transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000) .3s;
+      }
+    }
     
     &__menu {
       display:flex;
       flex-direction:column;
       justify-content:center;
-      height: 500px;
+      height: 90vh;
       position:relative;
       z-index:5;
       visibility:hidden;
@@ -61,13 +75,21 @@ header {
     &__item {
       opacity:0;
       transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000) .3s;
-    }
+      border-top: 0.5px solid rgba(255, 255, 255, 0.408);
     
-    @for $i from 1 through 4 {
-      &__item:nth-child(#{$i}){
-        transform:translateY(-40px * $i);
+      
+      &:last-child{
+
+        .nav__link{
+          margin-top: 20px;
+          padding: 0.6rem;
+          border: 1px solid white;
+          border-radius: 5px;
+        }
       }
+    
     }
+     
     
     &__link {
       color:white;
@@ -78,8 +100,7 @@ header {
       font-size:1.25rem;
       text-decoration:none;
       padding:1.5rem;
-      border-top: 0.5px solid rgba(255, 255, 255, 0.408);
-      
+
       &:hover,
       &:focus {
         outline:0;
@@ -192,6 +213,16 @@ header {
     
     //show the nav items
     .nav {
+
+      &_social_media_links {
+        visibility: visible;
+
+        i{
+          opacity:1;
+          transform:translateY(0);
+        }
+      }
+
       &__menu {
         visibility:visible;
       }
@@ -202,6 +233,43 @@ header {
       }
     }
   }
-  
+
+  .nav_desktop{
+    padding-inline: measurments.$wrapper-desktop;
+    padding-top: 80px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+      height: 40px;
+    }
+
+    &_links{
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      a{
+        font-weight: typography.$light-bold;
+        text-transform: uppercase;
+      }
+
+      .login{
+        padding: 20px 50px;
+      }
+    }
+  }
+
+  @include breakpoints.media(">LGdesktop"){
+    .nav_mobile{
+      display: none;
+    }
+
+    .nav_desktop{
+      display: flex;
+
 
     }
+  }
+}

@@ -1,5 +1,11 @@
 @use './colors';
+@use '../breakpoints/breakpoints';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$d-xsmall: 1.25rem;
+$d-small: 1.5rem;
+$d-medium: 3rem;
+$d-large: 4rem;
 
 $m-xxsmall:0.7rem;
 $m-xsmall:0.9rem;
@@ -13,9 +19,11 @@ $light: 300;
 $light-bold: 400;
 $bold: 500;
 
-$small-line-height: 1.725rem;
-$medium-line-height: 2.5rem;
+$small-line-height: 1.5;
+$medium-line-height: 1.2;
 
+
+$medium-letter-spacing: .08rem;
 $wide-letter-spasing: .2rem;
 
 
@@ -29,13 +37,20 @@ h1, h2, h3, h4{
 }
 
 h1{
-    font-size: $m-xlarge;
-    text-align: center;
     line-height: $medium-line-height;
+    font-size: $m-xlarge;
+
+    @include breakpoints.media(">LGdesktop"){
+        font-size: $d-large;
+    }
 }
 
 h2{
     font-size: $m-large;
+
+    @include breakpoints.media(">LGdesktop"){
+        font-size: $d-medium;
+    }
 }
 
 h3{
@@ -47,10 +62,20 @@ p{
     font-weight: $light;
     color: colors.$grayishBlue;
     line-height: $small-line-height;
+
+    @include breakpoints.media(">LGdesktop"){
+        font-size: $d-small;
+        font-weight: $light-bold;
+    }
 }
 
 a{
     font-size: $m-xsmall;
     text-decoration: none;
+    color: black;
+
+    @include breakpoints.media(">LGdesktop"){
+        font-size: $d-xsmall;
+    }
 }
 
