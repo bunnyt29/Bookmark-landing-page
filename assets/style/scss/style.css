@@ -89,6 +89,11 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+@media (min-width: 1901px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
 
 p {
   font-size: 1rem;
@@ -419,6 +424,13 @@ header .nav_desktop_links .login {
 .features_list_content .content h3 {
   padding-bottom: 15px;
 }
+.features_list_content .content_description_button {
+  display: none;
+  padding-top: 20px;
+}
+.features_list_content .content_description_button a {
+  padding: 20px 40px;
+}
 .features_list_content #content_one {
   display: none;
 }
@@ -431,6 +443,37 @@ header .nav_desktop_links .login {
 @media (min-width: 1901px) {
   .features {
     padding-inline: 10rem;
+  }
+  .features_list {
+    margin: 0 auto;
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+  .features_list_content {
+    margin-top: 50px;
+  }
+  .features_list_content .content {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+  }
+  .features_list_content .content_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: 40px;
+  }
+  .features_list_content .content_description h3 {
+    padding: 0;
+  }
+  .features_list_content .content_description p {
+    width: 40ch;
+  }
+  .features_list_content .content_description_button {
+    display: block;
   }
 }
 

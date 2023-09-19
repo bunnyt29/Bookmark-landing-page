@@ -58,6 +58,17 @@
             h3{
                 padding-bottom: 15px;
             }
+
+            &_description{
+                &_button{
+                    display: none;
+                    padding-top: 20px;
+                    a{
+                        padding: 20px 40px;
+                    }
+                }
+            }
+
         }
 
         #content_one{
@@ -76,5 +87,42 @@
     @include breakpoints.media(">LGdesktop"){
         padding-inline: measurments.$wrapper-desktop;
 
+        &_list{
+            margin: 0 auto;
+            width: 80%;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        &_list_content{
+            margin-top: 50px;
+            .content{     
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+
+                &_description{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: start;
+                    gap: 40px;
+
+                    h3{
+                        padding: 0;
+                    }
+
+                    p{
+                        width: 40ch;
+                    }
+
+                    &_button{
+                        display: block;
+                    }
+                }
+            }
+    
+        }    
     }
 }

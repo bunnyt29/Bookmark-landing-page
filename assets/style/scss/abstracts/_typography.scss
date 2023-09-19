@@ -4,8 +4,9 @@
 
 $d-xsmall: 1.25rem;
 $d-small: 1.5rem;
-$d-medium: 3rem;
-$d-large: 4rem;
+$d-medium: 2.5rem;
+$d-large: 3rem;
+$d-xlarge: 4rem;
 
 $m-xxsmall:0.7rem;
 $m-xsmall:0.9rem;
@@ -41,7 +42,7 @@ h1{
     font-size: $m-xlarge;
 
     @include breakpoints.media(">LGdesktop"){
-        font-size: $d-large;
+        font-size: $d-xlarge;
     }
 }
 
@@ -49,12 +50,16 @@ h2{
     font-size: $m-large;
 
     @include breakpoints.media(">LGdesktop"){
-        font-size: $d-medium;
+        font-size: $d-large;
     }
 }
 
 h3{
     font-size: $m-medium;
+
+    @include breakpoints.media(">LGdesktop"){
+        font-size: $d-medium;
+    }
 }
 
 p{
